@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-19T20:35:51.719914" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginPageView" source="C:\Projects\saucedemo_automation\tests\web_ui\LoginPageView.robot">
+<kw name="Suite setup" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-19T20:35:51.945795" level="INFO">Opening browser 'Edge' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-19T20:35:51.945633" elapsed="2.238574"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.184445" elapsed="0.042599"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.227288" elapsed="0.001282"/>
+</kw>
+<status status="PASS" start="2025-01-19T20:35:51.945193" elapsed="2.283542"/>
+</kw>
+<test id="s1-t1" name="Open Login Page in Browser" line="12">
+<kw name="Verify login page is displayed" owner="login_page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_LOGO}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.230376" elapsed="0.014047"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-19T20:35:54.264146" level="INFO">${text_logo} = Swag Labs</msg>
+<var>${text_logo}</var>
+<arg>${LOGIN_PAGE_LOGO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.244659" elapsed="0.019543"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${text_logo}</arg>
+<arg>${expected_logo}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.264373" elapsed="0.000250"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-19T20:35:54.264854" level="INFO">Login page displayed successfully</msg>
+<arg>Login page displayed successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.264756" elapsed="0.000140"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2025-01-19T20:35:54.230093" elapsed="0.034875"/>
+</kw>
+<doc>LP01 - Open the login page in the browser</doc>
+<tag>Login</tag>
+<status status="PASS" start="2025-01-19T20:35:54.228857" elapsed="0.036330"/>
+</test>
+<test id="s1-t2" name="Verify login page elements" line="17">
+<kw name="Verify login page is displayed" owner="login_page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_LOGO}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.266576" elapsed="0.011764"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-19T20:35:54.302775" level="INFO">${text_logo} = Swag Labs</msg>
+<var>${text_logo}</var>
+<arg>${LOGIN_PAGE_LOGO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.278540" elapsed="0.024277"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${text_logo}</arg>
+<arg>${expected_logo}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.302964" elapsed="0.000314"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-19T20:35:54.303660" level="INFO">Login page displayed successfully</msg>
+<arg>Login page displayed successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.303535" elapsed="0.000175"/>
+</kw>
+<arg>Swag Labs</arg>
+<status status="PASS" start="2025-01-19T20:35:54.266328" elapsed="0.037442"/>
+</kw>
+<kw name="Verify login page elements" owner="login_page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_PAGE_LOGO}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.305359" elapsed="0.017990"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-19T20:35:54.446276" level="INFO">Element 'id=user-name' is displayed.</msg>
+<arg>${INPUT_USERNAME}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.323556" elapsed="0.122824"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-19T20:35:54.464874" level="INFO">Element 'id=password' is displayed.</msg>
+<arg>${INPUT_PASSWORD}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.446545" elapsed="0.018405"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-19T20:35:54.477784" level="INFO">Element 'id=login-button' is displayed.</msg>
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.465070" elapsed="0.012819"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-19T20:35:54.492298" level="INFO">Element 'xpath:/html/body/div/div/div[2]/div[2]/div' is displayed.</msg>
+<arg>${CREDENTIALS_HINTSECTION}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.478060" elapsed="0.014311"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-19T20:35:54.492594" level="INFO">Login page elements are displayed successfully</msg>
+<arg>Login page elements are displayed successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.492494" elapsed="0.000129"/>
+</kw>
+<status status="PASS" start="2025-01-19T20:35:54.304918" elapsed="0.187748"/>
+</kw>
+<doc>LP02 - Verify the login page elements</doc>
+<tag>Login</tag>
+<status status="PASS" start="2025-01-19T20:35:54.265902" elapsed="0.226974"/>
+</test>
+<kw name="Suite teardown" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-19T20:35:54.494366" elapsed="2.251900"/>
+</kw>
+<status status="PASS" start="2025-01-19T20:35:54.494114" elapsed="2.252303"/>
+</kw>
+<status status="PASS" start="2025-01-19T20:35:51.721650" elapsed="5.024806"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Login</stat>
+</tag>
+<suite>
+<stat name="LoginPageView" id="s1" pass="2" fail="0" skip="0">LoginPageView</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
